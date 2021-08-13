@@ -9,3 +9,6 @@ github_username:  jekyll
 
 
 theme: "just-the-docs"
+
+plugins:
+ - jekyll-redirect-from
