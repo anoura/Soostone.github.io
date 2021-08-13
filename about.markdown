@@ -4,15 +4,23 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Napkin Wiki is a collection of HOWTOs and tutorials about the tool
+assisting data scientists when they crunch data through their relational and NoSQL DBs.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+[napkinweb](https://napkinweb.webflow.io/)
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+# Key features
+
+* Unused CTE column detection.
+* Transparent support multiple SQL-like backends (Postgres, BigQuery, Redshift)
+* Powerful template engine available in SQL queries
+* Seamless integration macro functions with SQL
+* Capabilities are extensible with type safest generic programming
+  language.
 
 
-[jekyll-organization]: https://github.com/jekyll
+
+
+
+
+<!--- [jekyll-organization]: https://github.com/jekyll --->
