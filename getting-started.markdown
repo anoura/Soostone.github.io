@@ -8,9 +8,10 @@ permalink: /getting-started/
 
 ## Installation
 
-**napkin** app is available in 2 forms.
+**Napkin** app is available in 2 forms: [live
+installer](#live-installer) and [dockerized version](#docker-version).
 
-### As a live installer
+### Live installer
 
 Live installer is a self extracting and self contained SHELL archive,
 which doesn't require docker nor nix environment. As for now live
@@ -43,7 +44,7 @@ are goin to be imported through `$PATH` variable.  Don't forget to start
 new shell session to update `$PATH` variable or you can benefit from
 `exec $SHELL` trick.
 
-### Uninstallation
+#### Uninstallation
 
 Napkin Live installer provides an uninstaller too.
 
@@ -55,7 +56,7 @@ $ uninstall-
 $ uninstall-b82gj7f0igpw23sapafxifsrr0f52771-napkin-0.3.8.sh
 ```
 
-## Docker version
+### Docker version
 
 Live installer is great, because it is very lightweight, but it is not
 available on
