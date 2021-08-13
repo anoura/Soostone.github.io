@@ -4,12 +4,15 @@ title: About
 permalink: /about/
 ---
 
+# Napkin
+
+## Intro
 Napkin Wiki is a collection of HOWTOs and tutorials about the tool
 assisting data scientists when they crunch data through their relational and NoSQL DBs.
 
 [napkinweb](https://napkinweb.webflow.io/){:target="_blank" rel="noopener"}
 
-# Key features
+## Key features
 
 * Unused CTE column detection.
 * Transparent support multiple SQL-like backends (Postgres, BigQuery, Redshift)
