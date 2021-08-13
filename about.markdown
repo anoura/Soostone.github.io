@@ -7,7 +7,7 @@ permalink: /about/
 Napkin Wiki is a collection of HOWTOs and tutorials about the tool
 assisting data scientists when they crunch data through their relational and NoSQL DBs.
 
-[napkinweb](https://napkinweb.webflow.io/)
+[napkinweb](https://napkinweb.webflow.io/){:target="_blank" rel="noopener"}
 
 # Key features
 
