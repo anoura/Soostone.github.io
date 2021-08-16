@@ -18,8 +18,7 @@ in
       echo Configure Napkin Wiki...
       # readlink result
       # result is a dangling symlink
-      # [ -L result ] && rm -r result
-      # [ ! -d $(readlink result) ] &&  mkdir -p $(readlink result)
+      # [ -L result ] && [ ! -d $(readlink result) ] &&  mkdir -p $(readlink result)
     '';
 
     buildPhase = ''
