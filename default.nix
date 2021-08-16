@@ -18,8 +18,7 @@ in
       echo Configure Napkin Wiki...
       # readlink result
       # result is a dangling symlink
-      # [ -L result ] && rm -r result
-      # [ ! -d $(readlink result) ] &&  mkdir -p $(readlink result)
+      # [ -L result ] && [ ! -d $(readlink result) ] &&  mkdir -p $(readlink result)
     '';
 
     buildPhase = ''
@@ -28,6 +27,8 @@ in
 
     installPhase = ''
       mkdir -p $out/share
+      echo "before cp -r _site $out/share/doc"
       cp -r _site $out/share/doc
+      echo "after cp -r _site $out/share/doc"
     '';
   }
