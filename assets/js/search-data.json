@@ -13,7 +13,7 @@
   },"2": {
     "doc": "Haddock",
     "title": "Haddock",
-    "content": "# Haddock ## Docs for versions * [Version 0.3.8]({{site.haddoc_url}}/app-version/index.html) ## Docs for branches * [last build]({{site.haddoc_url}}/last-build/index.html) * [master]({{site.haddoc_url}}/branch/master/index.html) * [Full list of branches with haddoc]({{site.haddoc_url}}/branch/index.html) ",
+    "content": "# Haddock ## Docs for versions * [Version 0.3.8]({{site.haddock_url}}/app-version/index.html) ## Docs for branches * [last build]({{site.haddock_url}}/last-build/index.html) * [master]({{site.haddock_url}}/branch/master/index.html) * [Full list of branches with haddoc]({{site.haddock_url}}/branch/index.html) ",
     "url": "/haddock/",
     "relUrl": "/haddock/"
   },"3": {
