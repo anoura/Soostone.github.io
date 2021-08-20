@@ -1559,4 +1559,12 @@ button.copy:hover { background-color: #59c6f1; background-image: -webkit-gradien
 
 button.copy.copied { opacity: 0.9 !important; }
 
+.right { text-align: right; }
+
+.top-code-caption { text-align: center; margin-bottom: -10px !important; }
+
+div.info { font-weight: bold; background-color: #c4e1ff !important; margin-top: 10px !important; }
+
+.info pre.highlight code { background-color: inherit !important; }
+
 /*# sourceMappingURL=just-the-docs-default.css.map */
