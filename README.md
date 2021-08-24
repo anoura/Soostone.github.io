@@ -27,3 +27,11 @@ The repo with rendered HTML is
 [here](https://github.com/Soostone/Soostone.github.io.git).
 
 Locally HTML output is rendered into `_site` folder.
+
+## Style-Guide
+
+* Napkin should always capitalized except when in code
+  (e.g. napkin.run doesn’t need to be capitalized)
+* Spec is always capitalized except when used in code (e.g. spec.yaml
+  doesn’t need to be capitalized)
+* Always capitalize SQL operators

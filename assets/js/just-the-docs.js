@@ -58,7 +58,7 @@ function initSearch() {
   request.onload = function(){
     if (request.status >= 200 && request.status < 400) {
       var docs = JSON.parse(request.responseText);
-      
+
       lunr.tokenizer.separator = /[\s\-/]+/
 
       var index = lunr(function(){
@@ -89,6 +89,59 @@ function initSearch() {
   };
 
   request.send();
+}
+
+// just innerHtml.replace breaks page,
+// because Html node attributes could be matched
+function replaceTextNodes(root, regex, onMatchFun) {
+  var children = root.childNodes;
+  if (children.length) {
+    for (var i = 0; i < children.length; ++i) {
+      var updated = replaceTextNodes(children[i], regex, onMatchFun);
+      if (updated) {
+        root.replaceChild(updated, children[i]);
+      }
+    }
+  } else {
+    if (root.textContent) {
+      var updatedText = root.textContent.replace(regex, onMatchFun);
+      if (updatedText != root.textContent) {
+        var span = document.createElement("span");
+        span.innerHTML = updatedText;
+        return span;
+      }
+    }
+  }
+  return null;
+}
+
+function scrollByQuery(query) {
+  var params = new URLSearchParams(query);
+  var queryKey = params.get("q");
+  if (queryKey !== null && queryKey.length > 2) {
+    var lQueryKey = queryKey.toLowerCase();
+    var mainDiv = document.getElementById("main-content-wrap");
+    var aTags = mainDiv.querySelectorAll("p,h1,h2,h3,h4,h5,h6,h7,a,li,span,pre");
+    // var aTags = document.querySelectorAll("h2");
+    var idx;
+    for (var i = 0; i < aTags.length; i++) {
+      if ((idx = aTags[i].textContent.toLowerCase().indexOf(lQueryKey)) >= 0) {
+        var theTag = aTags[i];
+        theTag.scrollIntoView();
+        replaceTextNodes(theTag, new RegExp(queryKey, 'gi'),
+          (match) => {
+            return '<span class="label-yellow">' + match + '</span>';
+          });
+        // theTag.innerHTML = theTag.innerHTML.replace(
+        //   new RegExp(queryKey, 'gi'),
+        //   function (match) {
+        //     return '<span class="label-yellow">' + match + '</span>';
+        //   }
+        // );
+        break;
+      }
+    }
+  }
 }
 
 function searchLoaded(index, docs) {
@@ -190,7 +243,12 @@ function searchLoaded(index, docs) {
 
       var resultLink = document.createElement('a');
       resultLink.classList.add('search-result');
-      resultLink.setAttribute('href', doc.url);
+      var queryUrl = doc.url;
+      var matchedKeys = Object.keys(result.matchData.metadata);
+      if (matchedKeys.length) {
+        queryUrl += '?q=' + matchedKeys[0];
+      }
+      resultLink.setAttribute('href', queryUrl);
       resultsListItem.appendChild(resultLink);
 
       var resultTitle = document.createElement('div');
@@ -438,6 +496,7 @@ jtd.setTheme = function(theme) {
 jtd.onReady(function(){
   initNav();
   initSearch();
+  scrollByQuery(window.location.search);
 });
 
 })(window.jtd = window.jtd || {});
