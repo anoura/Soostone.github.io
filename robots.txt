@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://soostone.github.io/sitemap.xml

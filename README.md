@@ -35,3 +35,10 @@ Locally HTML output is rendered into `_site` folder.
 * Spec is always capitalized except when used in code (e.g. spec.yaml
   doesn’t need to be capitalized)
 * Always capitalize SQL operators
+* Update `last_modified_at` field in Front Matter if you change a page,
+  because it affects sitemap.xml.
+
+
+## Adding new Jekyll gems and plugins
+
+Use `gen-gemset.sh` to update nix setup for new Jekyll plugins.
