@@ -126,6 +126,8 @@ h1 + h2 { margin-top: 44px; }
 
 h2 + p { margin-top: 41px !important; }
 
+h2 + h3 { margin-top: 40px; }
+
 h2 { margin-top: 44px; }
 
 p + h3 { margin-top: 42px; }
@@ -141,6 +143,8 @@ h4 + p { margin-top: 6px !important; }
 p + h4 { margin-top: 63px; }
 
 p { margin-top: 1em; margin-bottom: 0px; font-size: 28px; }
+
+li { font-size: 28px; }
 
 a { color: #2c84fa; text-decoration: none; }
 
@@ -307,19 +311,17 @@ body { position: relative; padding-bottom: 4rem; overflow-y: scroll; }
 
 .main-content ol > li { position: relative; }
 
-.main-content ol > li::before { position: absolute; top: 0.2em; left: -1.6em; color: #959396; content: counter(step-counter); counter-increment: step-counter; font-size: 12px !important; }
-
-@media (min-width: 31.25rem) { .main-content ol > li::before { font-size: 14px !important; } }
+.main-content ol > li::before { position: absolute; top: 0.2em; left: -1.6em; color: #959396; content: ""; counter-increment: step-counter; }
 
 @media (min-width: 31.25rem) { .main-content ol > li::before { top: 0.11em; } }
 
 .main-content ol > li ol { counter-reset: sub-counter; }
 
-.main-content ol > li ol li::before { content: counter(sub-counter, lower-alpha); counter-increment: sub-counter; }
+.main-content ol > li ol li::before { content: ""; counter-increment: sub-counter; }
 
 .main-content ul { list-style: none; }
 
-.main-content ul > li::before { position: absolute; margin-left: -1.4em; color: #959396; content: "•"; }
+.main-content ul > li::before { position: absolute; margin-left: -24px; color: #192a40; content: "•"; }
 
 .main-content .task-list { padding-left: 0; }
 
