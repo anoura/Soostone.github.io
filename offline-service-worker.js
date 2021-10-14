@@ -1,7 +1,9 @@
+var version = 2;
+
 self.addEventListener("fetch", (event) => {
   console.log("Service Worker Fetch event " + event.request.url);
   event.respondWith(
-    caches.open("cache1").then(
+    caches.open("cache" + version).then(
       cache => cache.match(event.request, {ignoreSearch: true}).then(
         response => {
           if (response) {
@@ -23,10 +25,10 @@ self.addEventListener("fetch", (event) => {
 self.addEventListener('install', (event) => {
   console.log("Start install worker " + new Date());
   event.waitUntil(
-    caches.delete("cache1")
+    caches.delete("cache" + (version - 1))
       .then(ok => {
         console.log("Previous cache is cleaned: " + ok);
-        caches.open("cache1").then(cache => {
+        caches.open("cache" + version).then(cache => {
           return cache.addAll(
             [ /* site.pages enumerates css and html */'/404.html','/getting-started/index.html',
               '/getting-started/','/google-search/index.html',
