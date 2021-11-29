@@ -1,4 +1,4 @@
-var version = 3;
+var version = 4;
 
 self.addEventListener("fetch", (event) => {
   console.log("Service Worker Fetch event " + event.request.url);
