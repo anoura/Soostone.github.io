@@ -12,7 +12,7 @@
 		"_sass/support/mixins/_typography.scss",
 		"_sass/color_schemes/dark.scss",
 		"_sass/modules.scss",
-		"../../../../nix/store/99997x8xssjm8d9mjf58rz7lzssc3m5r-ruby2.7.4-just-the-docs-0.3.3/lib/ruby/gems/2.7.0/gems/just-the-docs-0.3.3/_sass/vendor/normalize.scss/normalize.scss",
+		"../../../../nix/store/a5xql3pkc7m8907zwhrszk8nwyzc5pq0-ruby2.7.4-just-the-docs-0.3.3/lib/ruby/gems/2.7.0/gems/just-the-docs-0.3.3/_sass/vendor/normalize.scss/normalize.scss",
 		"_sass/base.scss",
 		"_sass/layout.scss",
 		"_sass/_linear.scss",
