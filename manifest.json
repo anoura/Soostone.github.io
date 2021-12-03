@@ -1,6 +1,6 @@
 {
   "short_name": "Napkin-Docs",
-  "name": "Napkin documentaion for data scientists",
+  "name": "Napkin documentation for data scientists",
   "description": "Napkin tutorials and Haddocs API for data scientists and Haskell engineers",
   "version": "0.1",
   "display": "standalone",
