@@ -20,6 +20,11 @@ gem 'jekyll-redirect-from'
 #   gem "jekyll-feed", "~> 0.12"
 # end
 
+# Allow Sass
+gem 'jekyll-sass-converter'
+# Fixes localhost on macOS
+# gem "webrick"
+
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 platforms :mingw, :x64_mingw, :mswin, :jruby do
