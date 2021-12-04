@@ -6,4 +6,4 @@ _site
 _layouts/vendor
 _includes/vendor
 /vendor
-
+.DS_Store
